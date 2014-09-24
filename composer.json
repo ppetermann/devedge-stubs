@@ -1,0 +1,31 @@
+{
+    "name": "devedge/stubs",
+    "description": "A PHP Library that contains Null-Implementations for various PSRs",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Petermann",
+            "email": "ppetermann80@googlemail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "psr/log": "1.0.0",
+        "psr/cache": "1.0.0"
+    },
+    "require-dev": {
+    },
+    "provide": {
+        "psr/log-implementation": "1.0.0",
+        "psr/cache-implementation": "1.0.0"
+    },
+    "replace": {
+        "psr/cache": "1.0.0@dev"
+    },
+    "support": {
+        "issues": "https://github.com/ppetermann/DevedgeStubs/issues"
+    },
+    "autoload": {
+        "psr-4": { "Devedge\\": "src/Devedge/", "Psr\\": "src/Psr/" }
+    }
+}
