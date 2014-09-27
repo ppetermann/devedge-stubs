@@ -8,7 +8,6 @@
             "email": "ppetermann80@googlemail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "psr/log": "1.0.0",
         "psr/cache": "1.0.0"
