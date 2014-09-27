@@ -3,4 +3,6 @@ VERSION 1  FIRST RELEASE
 ========================
 
    Version 1.0 - first release
+      27/09/2014 16:45  1.0.1  fix for non existing psr interface
+         f038b66 removed depedency to not yet existing package
       27/09/2014 16:29  1.0.0  initial release
