@@ -20,7 +20,7 @@ The Pool is instanciated by doing:
 $pool = new Devedge\Cache\NoCachePool();
 
 ## License
-MIT Style
+MIT Style, see LICENSE.txt
 
 ## Notes
 currently src/Psr contains the current Psr DRAFT for a caching standard, this is supposed to be replaced by using
