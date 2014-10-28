@@ -10,6 +10,7 @@ _default:
     prerequisites:
      - working-copy-check
      - display-last-changes
+     - composer-security-check
 
     # GENERAL CONFIG
     #  Apply to all branches except the one from the 'branch-specific' section
