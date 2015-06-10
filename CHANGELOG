@@ -1,4 +1,15 @@
 
+VERSION 2  LATEST PSR DRAFT ON THE PSR-CACHE
+============================================
+
+   Version 2.0 - latest psr draft on the psr-cache
+      10/06/2015 15:01  2.0.0  initial release
+         50d50c9 psr changes
+         f3e8c27 update to latest psr draft
+         145998f update to latest psr draft
+         058eecd adding security check to rmt config
+         aff27c2 minor fixes
+
 VERSION 1  FIRST RELEASE
 ========================
 
