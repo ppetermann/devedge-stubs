@@ -6,11 +6,9 @@ use Psr\Cache\CacheItemInterface;
 
 /**
  * Class NoCacheItem, a cache that doesn't.
- *
  */
 class NoCacheItem implements CacheItemInterface
 {
-
     /**
      * @var string
      */
@@ -42,15 +40,15 @@ class NoCacheItem implements CacheItemInterface
     }
 
     /**
-     * as if..
+     * Sets the value represented by this cache item.
      *
      * @param \Serializable $value
      * @param int $ttl
-     * @returns boolean
+     * @returns static
      */
     public function set($value = null, $ttl = null)
     {
-        return true;
+        return $this;
     }
 
     /**
@@ -60,41 +58,6 @@ class NoCacheItem implements CacheItemInterface
     public function isHit()
     {
         return false;
-    }
-
-    /**
-     * Removes the current key from the cache.
-     *
-     * @return \Psr\Cache\CacheItemInterface
-     *   The current item.
-     */
-    public function delete()
-    {
-        return $this;
-    }
-
-    /**
-     * nope doesnt exist. ever
-     * @return bool
-     */
-    public function exists()
-    {
-        return false;
-    }
-
-    /**
-     * Returns the expiration time of a not-yet-expired cache item.
-     *
-     * If this cache item is a Cache Miss, this method MAY return the time at
-     * which the item expired or the current time if that is not available.
-     *
-     * @return \DateTime
-     *   The timestamp at which this cache item will expire.
-     */
-    public function getExpiration()
-    {
-        // expire now
-        return new \DateTime();
     }
 
     /**

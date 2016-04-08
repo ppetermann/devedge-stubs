@@ -12,6 +12,16 @@ class NoCachePool implements CacheItemPoolInterface
 {
     /**
      * @param string $key
+     *
+     * @return bool
+     */
+    public function hasItem($key)
+    {
+        return false;
+    }
+
+    /**
+     * @param string $key
      * @return NoCacheItem|\Psr\Cache\CacheItemInterface
      */
     public function getItem($key)
@@ -33,11 +43,21 @@ class NoCachePool implements CacheItemPoolInterface
     }
 
     /**
-     * @return $this|CacheItemPoolInterface
+     * @return bool
      */
     public function clear()
     {
-        return $this;
+        return true;
+    }
+
+    /**
+     * @param string $key
+     *
+     * @return bool
+     */
+    public function deleteItem($key)
+    {
+        return true;
     }
 
     /**
@@ -45,12 +65,12 @@ class NoCachePool implements CacheItemPoolInterface
      *
      * @param array $keys
      * An array of keys that should be removed from the pool.
-     * @return static
+     * @return bool
      * The invoked object.
      */
     public function deleteItems(array $keys)
     {
-        return $this;
+        return true;
     }
 
     /**
@@ -59,12 +79,11 @@ class NoCachePool implements CacheItemPoolInterface
      * @param CacheItemInterface $item
      *   The cache item to save.
      *
-     * @return static
-     *   The invoked object.
+     * @return true
      */
     public function save(CacheItemInterface $item)
     {
-        return $this;
+        return true;
     }
 
     /**
@@ -72,19 +91,17 @@ class NoCachePool implements CacheItemPoolInterface
      *
      * @param CacheItemInterface $item
      *   The cache item to save.
-     * @return static
-     *   The invoked object.
+     * @return bool
      */
     public function saveDeferred(CacheItemInterface $item)
     {
-        return $this;
+        return true;
     }
 
     /**
      * Persists any deferred cache items.
      *
      * @return bool
-     *   TRUE if all not-yet-saved items were successfully saved. FALSE otherwise.
      */
     public function commit()
     {

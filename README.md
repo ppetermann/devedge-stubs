@@ -12,19 +12,11 @@ You can use
 $logger = new Devedge\Log\NoLog; to create a psr compliant Null Logger.
 
 ## PSR-6 - psr/cache
-PSR-6 is (still) not accepted, hence this lib does not only contains a null-caching PSR-6 implementation,
-it also contains a copy of the current (2014-09-24) PSR interface, and has this set as a composer "replace"
-relation (so it shouldn't break stuff the moment PSR-6 finally comes out).
-
 The Pool is instanciated by doing:
 $pool = new Devedge\Cache\NoCachePool();
 
 ## License
 MIT Style, see LICENSE.txt
-
-## Notes
-currently src/Psr contains the current Psr DRAFT for a caching standard, this is supposed to be replaced by using
-the interface provided once php-fig has released the real standard
 
 ## Links
  * https://devedge.eu
