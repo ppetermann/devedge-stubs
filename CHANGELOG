@@ -1,4 +1,12 @@
 
+VERSION 3  COMPATIBILITY WITH FINAL PSR
+=======================================
+
+   Version 3.0 - compatibility with final psr
+      08/04/2016 15:32  3.0.0  initial release
+         8c8737c Merge pull request #1 from stof/psr_6
+         479b958 Update the package for the final version of psr/cache
+
 VERSION 2  LATEST PSR DRAFT ON THE PSR-CACHE
 ============================================
 
